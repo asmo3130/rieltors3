@@ -39,6 +39,9 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Форма аренды', 'url' => ['/form/index']],
+       /* ['label' => 'Новость', 'url' => ['/form/show']],*/
+        ['label' => 'Filter', 'url' => ['/filter/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -65,6 +68,11 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
+
+        <?php if (isset($this->blocks['block1'])): ?>
+            <?php echo $this->blocks['block1'] ?>
+        <?php endif; ?>
+
         <?= $content ?>
     </div>
 </div>

@@ -1,6 +1,7 @@
 $(document).ready(function () {
     let confirm = $('.confirm');
     let del = $('.delete');
+    let conf_page= $('.confirm_page');
 
     confirm.on('click', function () {
         $.ajax({
@@ -22,6 +23,17 @@ $(document).ready(function () {
         })
             .done(function() {
                 window.location.href = 'nonregistered';
+            });
+    });
+
+    conf_page.on('click', function () {
+        $.ajax({
+            method: "POST",
+            url: "delete",
+            data: conf_page.data()
+        })
+            .done(function() {
+                alert("dsgsg");
             });
     });
 });

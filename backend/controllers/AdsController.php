@@ -51,13 +51,9 @@ class AdsController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['nonregistered', 'registered', 'confirm', 'delete'],
-                        'allow' => true,
-                    ],
-                    [
                         'actions' => ['nonregistered', 'registered', 'confirm', 'delete '],
                         'allow' => true,
-                        'roles' => ['admin'],
+                        'roles' => ['@'],
                     ],
                 ],
             ],
@@ -70,7 +66,14 @@ class AdsController extends Controller
         ];
     }
 
-
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+        ];
+    }
 
         public function actionRegistered(){
 

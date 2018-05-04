@@ -10,6 +10,8 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['debug'],
+   // 'layout' => 'basic',
+    //'language' => 'ru_ru',
     'modules' => [
         'debug' => [
             'class' => 'yii\debug\Module',
