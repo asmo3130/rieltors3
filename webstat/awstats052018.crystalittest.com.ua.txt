@@ -1,0 +1,291 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201805 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.crystalittest.com.ua.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2000                
+POS_TIME 2688                
+POS_VISITOR 3474                
+POS_DAY 3672                
+POS_DOMAIN 3826                
+POS_LOGIN 4059                
+POS_ROBOT 4214                
+POS_WORMS 4346                
+POS_EMAILSENDER 4477                
+POS_EMAILRECEIVER 4620                
+POS_SESSION 4696                
+POS_SIDER 4843                
+POS_FILETYPES 5895                
+POS_DOWNLOADS 6098                
+POS_OS 6146                
+POS_BROWSER 6214                
+POS_SCREENSIZE 6312                
+POS_UNKNOWNREFERER 6386                
+POS_UNKNOWNREFERERBROWSER 6473                
+POS_ORIGIN 6555                
+POS_SEREFERRALS 6693                
+POS_PAGEREFS 6837                
+POS_SEARCHWORDS 6985                
+POS_KEYWORDS 7137                
+POS_MISC 2350                
+POS_ERRORS 7196                
+POS_CLUSTER 3915                
+POS_SIDER_404 7334                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180503181401 2274 586868 17223636938549
+FirstTime 20180503100540
+LastTime 20180503181401
+LastUpdate 20180504045327 2274 0 2274 0 0
+TotalVisits 2                   
+TotalUnique 2                   
+MonthHostsKnown 0                   
+MonthHostsUnknown 2                   
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 205 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 0 0 0
+6 0 0 0 0 0 0
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 0 0 0 0 0 0
+10 68 128 1786538 1 8 34438
+11 129 296 3935033 57 105 396032
+12 22 39 363505 2 5 16896
+13 133 199 1574733 28 51 517138
+14 183 339 3646466 16 57 166257
+15 31 35 223423 5 8 38811
+16 244 330 2872786 13 48 148802
+17 318 397 3072198 43 79 464210
+18 126 132 717956 9 18 100790
+19 0 0 0 0 0 0
+20 0 0 0 0 0 0
+21 0 0 0 0 0 0
+22 0 0 0 0 0 0
+23 0 0 0 0 0 0
+END_TIME
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 2
+94.158.74.39 1215 1850 17872931 20180503181401 20180503100540 /debug/default/toolbar
+172.16.0.104 39 45 319707 20180503163131
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20180503 1254 1895 18192638 2
+END_DAY
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 1254 1895 18192638
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Session range - Number of visits
+BEGIN_SESSION 1
+2mn-5mn 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 30
+/debug/default/toolbar 860 3061212 0 1
+/pages/about 137 1038188 0 0
+/pages/services 28 210700 0 0
+/admin/assets/6dde9ac6/fonts/fontawesome-webfont.woff2 26 2011854 0 0
+/filter/index 24 714924 1 0
+/admin/users/index 24 129556 0 0
+/ 20 160369 1 0
+/form/index 16 132865 0 0
+/pages/aboutst 12 90866 0 0
+/pages/news 11 82864 0 0
+/pages/careers 10 75356 0 0
+/site/signup 4 33775 0 0
+/pages 1 7619 0 0
+/admin/ads/registered 2 10843 0 0
+/admin/ads/nonregistered 7 36205 0 0
+/site/about 3 63379 0 0
+/admin/ads/confirm 3 14913 0 0
+/site/contact 4 34258 0 0
+/reals/index 10 259659 0 0
+/site/login 2 16670 0 0
+/pages/spesial 10 75328 0 0
+/admin 3 14436 0 0
+/admin/assets/44f2ad48/fonts/glyphicons-halflings-regular.woff2 2 36492 0 0
+/pages/sell 4 30123 0 0
+/pages/contacts 10 75310 0 0
+/admin/assets/44f2ad48/css/bootstrap.css.map 2 151468 0 0
+/admin/ 1 4332 0 0
+/admin/site/login 4 4827 0 0
+/pages/index 10 76369 0 0
+/site/captcha 4 11955 0 0
+END_SIDER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 7
+map 2 151468 0 0
+css 225 2182029 0 0
+html 21 164701 0 0
+jpg 78 384410 0 0
+js 338 6959484 0 0
+woff2 28 2048346 0 0
+Unknown 1203 6302200 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 3
+winnt 1339
+linux 511
+win7 45
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 2
+chrome66.0.3359.139 1850
+chrome65.0.3325.181 45
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 43 43
+From1 0 0
+From2 0 0
+From3 0 0
+From4 1211 1852
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+403 7 33430
+302 2 1004
+400 2 9560
+500 51 893908
+404 112 830467
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 22
+/pages/testtest%20onas22 5 http://crystalittest.com.ua/pages/about
+/pages/careers 5 http://crystalittest.com.ua/pages/careers
+/admin/users/confirm 1 http://crystalittest.com.ua/admin/users/index
+/pages/about 2 http://crystalittest.com.ua/pages/contacts
+/real 1 -
+/pages/onas22 6 http://crystalittest.com.ua/pages/about
+/pages/testtest%20onas2 6 http://crystalittest.com.ua/pages/about
+/reals/index 1 http://crystalittest.com.ua/reals/index
+/pages/spesial 7 http://crystalittest.com.ua/pages/spesial
+/pages/testtest%20onas 8 http://crystalittest.com.ua/pages/about
+/pages/onas 14 http://crystalittest.com.ua/pages/about
+/pages/carerrs 2 -
+/real/index 17 -
+/pages/Array 1 http://crystalittest.com.ua/pages/about
+/post/view 3 http://crystalittest.com.ua/pages/about
+/pages/aboutst 1 -
+/pages/contacts 5 http://crystalittest.com.ua/pages/spesial
+/pages/sell 3 http://crystalittest.com.ua/pages/about
+/admin/users/delete 3 http://crystalittest.com.ua/admin/users/index
+/pages/onas2 13 http://crystalittest.com.ua/pages/about
+/pages/services 5 http://crystalittest.com.ua/pages/contacts
+/pages/news 3 http://crystalittest.com.ua/pages/about
+END_SIDER_404

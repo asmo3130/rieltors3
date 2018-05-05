@@ -65,7 +65,13 @@ class Filter extends ActiveRecord
         return $filter;
     }
 
-    public function searchResult(){
+    public function searchResult()
+    {
+        $tr = array();
+
+        $check = array_push($tr, '');
+
+        return $check;
 
     }
 }

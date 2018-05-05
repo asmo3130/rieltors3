@@ -16,6 +16,16 @@ use app\models\Update;
 class UpdateController extends Controller
 {
 
+    public $text;
+
+
+    public function rules()
+    {
+        return [
+            // тут определяются правила валидации
+        ];
+    }
+
     public function behaviors()
     {
         return [
@@ -23,11 +33,11 @@ class UpdateController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index'],
+                        'actions' => ['index', 'deletes'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['index'],
+                        'actions' => ['index', 'deletes'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
@@ -44,6 +54,13 @@ class UpdateController extends Controller
 
     public function actionIndex(){
         $model = new Update();
+
+        return $this->render('index', ['model' => $model]);
+    }
+
+    public function actionDeletes(){
+        $model = new Update();
+        $model->deletes($_POST['id'], $_POST['title'], $_POST['content']);
 
         return $this->render('index', ['model' => $model]);
     }

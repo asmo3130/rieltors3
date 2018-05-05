@@ -51,8 +51,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',                                
+               '' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+/*                'pages/<url:[\w-]+>' => 'pages/aboutst',*/
             ],
         ],
     ],

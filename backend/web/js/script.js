@@ -1,7 +1,9 @@
 $(document).ready(function () {
     let confirm = $('.confirm');
     let del = $('.delete');
-    let conf_page= $('.confirm_page');
+    let conf = $('.confirm_page');
+    let r_upd = $('.confirm_rielr_update');
+    let r_del = $('.confirm_rielr_delete');
 
     confirm.on('click', function () {
         $.ajax({
@@ -26,14 +28,32 @@ $(document).ready(function () {
             });
     });
 
-    conf_page.on('click', function () {
+    r_upd.on('submit', function () {
         $.ajax({
             method: "POST",
-            url: "delete",
-            data: conf_page.data()
+            url: "updates",
+            data: $(this).serialize()
+        })  .error(function () {
+            alert('false');
         })
-            .done(function() {
-                alert("dsgsg");
+            .done(function(data) {
+                alert(data);
             });
     });
+
+    r_del.on('click', function () {
+        $.ajax({
+            method: "POST",
+            url: "deletes",
+            data: r_del.data()
+        })
+            .done(function(data) {
+                alert(data);
+            });
+    });
+
+    conf.on('submit', function () {
+        window.location.href = 'http://crystalittest.com.ua/admin/update/';
+    })
+
 });

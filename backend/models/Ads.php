@@ -73,7 +73,7 @@ class Ads extends ActiveRecord
 
     public function doDelete($row_id){
 
-        var_dump($row_id);
+        //var_dump($row_id);
 
         $room = Ads::findOne($row_id);
         $room->deleteAll('id ='.$row_id);

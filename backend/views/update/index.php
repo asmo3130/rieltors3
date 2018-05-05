@@ -5,8 +5,12 @@
  * Date: 04.05.2018
  * Time: 11:29
  */
-
+use dosamigos\tinymce\TinyMce;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 $pages = $model->pages();
+
+
 ?>
 <?php foreach ($pages as $page) :?>
 <div class="container">
@@ -33,7 +37,6 @@ $pages = $model->pages();
 
         </div>
 
-
     </div>
     <div class="modal fade bs-example-modal-lg id_<?=$page['id'];?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -42,34 +45,26 @@ $pages = $model->pages();
 
                     <div class="col-xs-6 col-md-3">
                         <div class="caption">
-                            <p>
-                                <input type="text" value="<?=$page["title"]?>">
-                            </p>
-                            <p>
-                                <input type="text" value="<?=$page["content"]?>">
-                            </p>
-                            <p>
-                                <input type="text" value="<?//=$user["phone"]?>">
-                            </p>
-
+                            <form action="update/deletes" method="post">
+                                <p>
+                                    <input type="text" name="title" value="<?=$page["title"]?>">
+                                    <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
+                                </p>
+                                <p>
+                                    <input type="text" name="content" value="<?=$page["content"]?>">
+                                    <input type="hidden" name="id" value="<?=$page['id'];?>">
+                                </p>
+                                <button class="btn btn-default btn-lg active confirm_page" data-button="<?=$url;?>" role="button">Подтвердить</button>
+                            </form>
 
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3">
                         <div class="caption">
-                            <p>
-                                <span>Этаж: </span>  <?//=//$ad["flors"];?>
-                            </p>
-                            <p>
-                                <span>Этажей в доме: </span>  <?//=//$ad["total_floors"];?>
-                            </p>
-                            <p><span>Цена: </span><?//=//$ad["price"];?> UAH </p>
                             <?
-                            // $url = Url::to(['ads/confirm', 'id' => $ad['id']]);
-                           // $url = $user['id'];
+                            $url = $page['id'];
                             ?>
-                            <!--                            <a href="--><?//=$url;?><!--" class="btn btn-default btn-lg active comfirm" role="button">Подтвердить</a>-->
-                            <button class="btn btn-default btn-lg active confirm_page" data-button="<?//=//$url;?>" role="button">Подтвердить</button>
+
                         </div>
                     </div>
 
