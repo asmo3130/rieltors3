@@ -12,8 +12,17 @@ $articles = $model->articles();
 
 //var_dump($articles);
 ?>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css' rel='stylesheet' type='text/css' />
 
-
+    <!-- Include JS file. -->
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.min.js'></script>
+    <script>
+        $(function() {
+            $('#title').froalaEditor({toolbarInline: false})
+        });
+    </script>
+<?=$user["username"]?>
 <? foreach ($articles as $item) :?>
 <div class="container">
     <div class="row">
@@ -51,7 +60,7 @@ $articles = $model->articles();
                                     <input type="file" name="myfile">
                                 </p>
                                 <p>
-                                    <input type="text" name="content" value="<?=$item["content"]?>">
+<!--                                    <input type="text" name="content" value="--><?//=$item["content"]?><!--">-->
                                     <textarea id="content" name="content"><?=$item["content"]?></textarea>
                                     <input type="hidden" name="id" value="<?=$item['id'];?>">
                                 </p>

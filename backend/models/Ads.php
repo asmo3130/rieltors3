@@ -40,10 +40,13 @@ class Ads extends ActiveRecord
         $massage_s = "Обьявление".$id ." подтвержденно";
 
         $massage_f = "Обьявление".$id ." не подтвержденно";
+        $massage_f = "Обьявление".$id ." деактивировано";
         if($status == true){
             mail('nikolay_kolchin@i.ua', 'test', $massage_s);
         }elseif ($status == false){
             mail('nikolay_kolchin@i.ua', 'test', $massage_f);
+        }elseif($status == "deactive"){
+            mail('nikolay_kolchin@i.ua', 'test', $massage_d);
         }
 
         return false;
@@ -81,6 +84,14 @@ class Ads extends ActiveRecord
         $this->sendMail(false, $row_id);
 
         return true;
+    }
+
+    public function doDeactive($id){
+        Ads::updateAll(['confirmed' => 0], [ 'id'=> $id]);
+
+        $this->sendMail("deactive", $id);
+
+        return Url::to(['ads/nonregistered']);
     }
 
 }

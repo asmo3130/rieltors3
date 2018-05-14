@@ -99,6 +99,7 @@ foreach ($ads as $ad) :
                                 </p>
                                 <p><span>Цена: </span><?=$ad["price"];?> UAH </p>
                                 <a href="confirm/?id=<?=$ad['id'];?>" class="btn btn-default btn-lg active" role="button">Подтвердить</a>
+                                <a href="deactive/?id=<?=$ad['id'];?>" class="btn btn-default btn-lg active" role="button">deactive</a>
                             </div>
                         </div>
 

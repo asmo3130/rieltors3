@@ -1,5 +1,6 @@
-$(document).ready(function () { $("#content").cleditor(); });
-$(document).ready(function () { $("#title").cleditor(); });
+// $(document).ready(function () { $("#content").cleditor(); });
+// $(document).ready(function () { $("#title").cleditor(); });
+
 $(document).ready(function () {
 
 

@@ -17,7 +17,8 @@ $this->title = 'пользователи зарегестрированые';
 <?php
 foreach ($users as $user) :
 ?>
-
+    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 <div class="container">
     <div class="row">
 
