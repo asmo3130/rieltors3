@@ -23,6 +23,10 @@ class Pages extends ActiveRecord
     public $aboutstay = array();
     public $servicesstaty = array();
     public $article = array();
+    public $articles = array();
+    public $newsstay = array();
+    public $careersstay = array();
+    public $spesialstay = array();
 
     public function Services()
     {
@@ -68,6 +72,21 @@ class Pages extends ActiveRecord
         return $article;
     }
 
+    public function ArticleStay()
+    {
+        $tables = (new Query())
+            ->select('*')
+            ->from('articles')
+            ->where(['page_id' => '9'])
+            ->all();
+        foreach ($tables as $item)
+        {
+            $articles[] = $item ;
+        }
+
+        return $articles;
+    }
+
     public function Careers()
     {
 
@@ -82,6 +101,22 @@ class Pages extends ActiveRecord
         }
 
         return $careers;
+    }
+
+    public function CareersStay()
+    {
+
+        $tables = (new Query())
+            ->select('*')
+            ->where(['page_id' => '3'])
+            ->from('articles')
+            ->all();
+        foreach ($tables as $item)
+        {
+            $careersstay[] = $item ;
+        }
+
+        return $careersstay;
     }
 
     public function About()
@@ -131,6 +166,22 @@ class Pages extends ActiveRecord
         return $news;
     }
 
+    public function NewsStay()
+    {
+
+        $tables = (new Query())
+            ->select('*')
+            ->where(['page_id' => '6'])
+            ->from('articles')
+            ->all();
+        foreach ($tables as $item)
+        {
+            $newsstay[] = $item ;
+        }
+
+        return $newsstay;
+    }
+
     public function Spesial()
     {
 
@@ -145,6 +196,22 @@ class Pages extends ActiveRecord
         }
 
         return $spesial;
+    }
+
+    public function SpesialStay()
+    {
+
+        $tables = (new Query())
+            ->select('*')
+            ->where(['page_id' => '5'])
+            ->from('articles')
+            ->all();
+        foreach ($tables as $item)
+        {
+            $spesialstay[] = $item ;
+        }
+
+        return $spesialstay;
     }
 
     public function Contacts()

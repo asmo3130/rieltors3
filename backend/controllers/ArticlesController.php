@@ -37,7 +37,7 @@ class ArticlesController extends Controller
                 // Если файл успешно загружен, то вносим в БД (надеюсь, что вы знаете как)
                 // Можно сохранить $full_path (полный путь) или просто имя файла - $new_name
             }else{
-                echo "error";
+                return $this->render('index', ['model' => $model]);
             }
         }
 

@@ -56,7 +56,11 @@ class Rieltor extends ActiveRecord{
 
     public function updates($name, $phone, $email, $id)
     {
+        var_dump($name);
+
         Rieltor::updateAll(['name'=>$name, 'phone'=>$phone,'email'=>$email],['id'=>$id]);
+
+
 
         return true;
     }

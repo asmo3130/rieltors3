@@ -24,7 +24,7 @@ $t1 = $model->AboutStaty();
     <?php foreach ($t1 as $t): ?>
         <?php if ($t['id'] == 1): ?>
             <h1><?php echo $t['title']?></h1>
-            <div><?php echo $t['content'] ?></div>
+            <div><?php echo $t['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
         <?php endif; ?>
     <?php endforeach; ?>
 </body>

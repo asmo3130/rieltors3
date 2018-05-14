@@ -16,6 +16,7 @@ class Filter extends ActiveRecord
     public $sity = array();
     public $strit = array();
     public $filter = array();
+    public $oblast = array();
 
     public function FunStr($imet)
     {
@@ -33,9 +34,22 @@ class Filter extends ActiveRecord
             ->from('area_name')
             ->all();
         foreach ($tables as $item) {
-             $sity[] = $item;
+             $sity[] = $item['name_area'];
         }
         return $sity;
+    }
+
+    public function SearchOblast()
+    {
+        $oblast = array();
+        $tables = (new Query())
+            ->select('*')
+            ->from('lviv_suburbs')
+            ->all();
+        foreach ($tables as $item) {
+            $oblast[] = $item['name'];
+        }
+        return $oblast;
     }
 
     public function SearchStrit()

@@ -21,6 +21,7 @@ class FilterController extends AppController
         $question_cat = new Filter();
         $question_cat->sity = $model->sity;
         $question_cat->strit = $model->strit;
+        $question_cat->oblast = $model->oblast;
 
         return $this->render('index', ['model' => $model]);
     }
@@ -37,6 +38,14 @@ class FilterController extends AppController
 
         $model = new Filter();
         $model->searchResult($_POST);
+
+        return $this->render('index', ['model' => $model]);
+    }
+
+    public function actionOblast(){
+
+        $model = new Filter();
+        $model->actionOblast($_POST);
 
         return $this->render('index', ['model' => $model]);
     }

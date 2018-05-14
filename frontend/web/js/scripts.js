@@ -12,7 +12,6 @@
 //             window.location.href = 'nonregistered';
 //         });
 // });
-
 var tab; // заголовок вкладки
 var tabContent; // блок содержащий контент вкладки
 
@@ -49,5 +48,39 @@ function showTabsContent(b){
         tab[b].classList.add('whiteborder');
         tabContent[b].classList.remove('hide');
         tabContent[b].classList.add('show');
+    }
+}
+
+var test = document.getElementById('filter-lviv_sections');
+test.addEventListener('change', Selected);
+
+function Selected(event) {
+    var label = event.target.value;
+   // console.log(label);
+    if (label == 1) {
+        document.querySelector('.field-filter-strit').style.display = 'none';
+        document.querySelector('.field-filter-sity').style.display = 'none';
+        //alert("Yes");
+    }
+    else
+    {
+        document.querySelector('.field-filter-strit').style.display = 'block';
+        document.querySelector('.field-filter-sity').style.display = 'block';
+    }
+}
+
+var testic = document.getElementById('filter-oblast');
+testic.addEventListener('change', Selectedis);
+
+function Selectedis(eventic) {
+    var label = eventic.target.value;
+    // console.log(label);
+    if (label == 3 || label == 26 || label == 10 || label == 4) {
+        document.querySelector('.field-filter-strit').style.display = 'block';
+        //alert("Yes");
+    }
+    else
+    {
+        document.querySelector('.field-filter-strit').style.display = 'none';
     }
 }

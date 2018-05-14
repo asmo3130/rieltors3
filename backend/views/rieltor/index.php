@@ -56,9 +56,6 @@ $area = $model->getArea();
     </div>
 </div>
 
-
-
-
 <?php foreach ($rieltors as $item) { ?>
     <div class="row">
 
@@ -96,6 +93,14 @@ $area = $model->getArea();
                                 <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                                 <input type="phone" name="phone" value="<?=$item['phone']?>" placeholder="phone">
                                 <input type="email" name="email" value="<?=$item['email']?>" placeholder="email">
+                                <select name="area" id="area">
+                                    <?php foreach ($area as $item) {
+                                        ?>
+                                        <option value="<?=$item['id']?>"><?=$item['name_area']?></option>
+                                        <?
+                                        }
+                                    ?>
+                                </select>
                             </p>
                             <button class="btn btn-default btn-lg active confirm_rielr_update" role="button">Подтвердить</button>
                             <button class="btn btn-default btn-lg active confirm_rielr_delete" data-button="<?=$item['id']?>" role="button">Удалить</button>

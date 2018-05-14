@@ -28,31 +28,31 @@ echo $ab['0']; ?> <br>
         <?php // debug($a) ?>
              <?php if ($a['id'] == 1): ?>
             <li><a href="t1"><?php echo $a['title']?></a></li>
-            <div><?php echo $a['content'] ?></div>
+            <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
             <?php if ($a['id'] == 3): ?>
                 <li><a href="t2"><?php echo $a['title']?></a></li>
-            <div><?php echo $a['content'] ?></div>
+            <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
             <?php if ($a['id'] == 4): ?>
                 <li><a href="t3"><?php echo $a['title']?></a></li>
-                <div><?php echo $a['content'] ?></div>
+                <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
             <?php if ($a['id'] == 5): ?>
                 <li><a href="t4"><?php echo $a['title']?></a></li>
-                <div><?php echo $a['content'] ?></div>
+                <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
             <?php if ($a['id'] == 6): ?>
                 <li><a href="t5"><?php echo $a['title']?></a></li>
-                <div><?php echo $a['content'] ?></div>
+                <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
             <?php if ($a['id'] == 7): ?>
                 <li><a href="t6"><?php echo $a['title']?></a></li>
-                <div><?php echo $a['content'] ?></div>
+                <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
             <?php if ($a['id'] == 8): ?>
                 <li><a href="t7"><?php echo $a['title']?></a></li>
-                <div><?php echo $a['content'] ?></div>
+                <div><?php echo $a['content'] ?><img src="http://crystalittest.com.ua/backend/web/<?php echo $t['img']?>"></div>
             <?php endif; ?>
         <?php endforeach; ?>
     </ul>

@@ -24,11 +24,11 @@ class UsersController extends Controller{
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'confirm', 'delete'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'confirm', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -57,6 +57,21 @@ class UsersController extends Controller{
         $model = new Users();
 
         return $this->render('index',['model' => $model]);
+    }
+
+    public function actionConfirm(){
+        $model = new Users();
+        $model->confirm();
+
+        return $this->render('index', ['model' => $model]);
+    }
+
+    public function actionDelete(){
+        $model = new Users();
+        $model->deletes($_POST['button']);
+
+
+        return $this->render('index', ['model' => $model]);
     }
 
 }

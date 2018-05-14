@@ -35,31 +35,31 @@ class PagesController extends Controller
     {
         $model = new Pages();
 
-        return $this->render('article', ['model' => $model]);
+        return $this->render('a1', ['model' => $model]);
     }
     public function actionA2()
     {
         $model = new Pages();
 
-        return $this->render('article', ['model' => $model]);
+        return $this->render('a2', ['model' => $model]);
     }
     public function actionA3()
     {
         $model = new Pages();
 
-        return $this->render('article', ['model' => $model]);
+        return $this->render('a3', ['model' => $model]);
     }
     public function actionA4()
     {
         $model = new Pages();
 
-        return $this->render('article', ['model' => $model]);
+        return $this->render('a4', ['model' => $model]);
     }
     public function actionA5()
     {
         $model = new Pages();
 
-        return $this->render('article', ['model' => $model]);
+        return $this->render('a5', ['model' => $model]);
     }
 
     public function actionCareers()

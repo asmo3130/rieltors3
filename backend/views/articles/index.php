@@ -13,6 +13,7 @@ $articles = $model->articles();
 //var_dump($articles);
 ?>
 
+
 <? foreach ($articles as $item) :?>
 <div class="container">
     <div class="row">
@@ -40,16 +41,18 @@ $articles = $model->articles();
             <div class="modal-content">
                 <div class="panel-body">
 
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-12 col-md-12">
                         <div class="caption">
                             <form action="articles/updates" method="post">
                                 <p>
-                                    <input type="text" name="title" value="<?=$item["title"]?>">
+<!--                                    <input type="text" name="title" value="">-->
+                                    <textarea id="title" name="title"><?=$item["title"]?></textarea>
                                     <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                                     <input type="file" name="myfile">
                                 </p>
                                 <p>
                                     <input type="text" name="content" value="<?=$item["content"]?>">
+                                    <textarea id="content" name="content"><?=$item["content"]?></textarea>
                                     <input type="hidden" name="id" value="<?=$item['id'];?>">
                                 </p>
                                 <?
