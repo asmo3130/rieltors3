@@ -37,6 +37,15 @@ class Ads extends ActiveRecord
     }
 
     public function sendMail($status, $id){
+        $massage_s = "Обьявление".$id ." подтвержденно";
+
+        $massage_f = "Обьявление".$id ." не подтвержденно";
+        if($status == true){
+            mail('nikolay_kolchin@i.ua', 'test', $massage_s);
+        }elseif ($status == false){
+            mail('nikolay_kolchin@i.ua', 'test', $massage_f);
+        }
+
         return false;
     }
 
@@ -57,16 +66,19 @@ class Ads extends ActiveRecord
     public function doConfirm($row_id){
         Ads::updateAll(['confirmed' => 1], [ 'id'=> $row_id]);
 
+        $this->sendMail(true, $row_id);
 
         return Url::to(['ads/nonregistered']);
     }
 
     public function doDelete($row_id){
 
-        var_dump($row_id);
+        //var_dump($row_id);
 
         $room = Ads::findOne($row_id);
         $room->deleteAll('id ='.$row_id);
+
+        $this->sendMail(false, $row_id);
 
         return true;
     }

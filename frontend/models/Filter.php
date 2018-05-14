@@ -1,44 +1,91 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: asmo
- * Date: 02.04.18
- * Time: 13:56
+ * User: Денис(PHP)
+ * Date: 24.04.2018
+ * Time: 17:49
  */
 
-namespace frontend\models;
+namespace app\models;
 
-use Yii;
-use yii\base\Model;
+use yii\db\ActiveRecord;
+use yii\db\Query;
 
-class Filter extends Model
+class Filter extends ActiveRecord
 {
-    public $rayon;
-    public $rooms_count;
-    public $street;
-    public $prise;
-    public $total_area;
-    public $living_area;
-    public $kitchen_area;
-    public $type_house;
-    public $type_of_heating;
-    public $walls;
-    public $year_building;
-    public $total_floors;
-    public $description;
-    public $name;
-    public $last_name;
-    public $phone;
-    public $email;
-    public $photo_upload;
-    public $loading_plan;
+    public $sity = array();
+    public $strit = array();
+    public $filter = array();
+    public $oblast = array();
 
-
-    public function rules()
+    public function FunStr($imet)
     {
-        return [
-            [['name', 'email', 'phone', 'last_name'], 'required', 'message' => 'Не заполненно поле'],
-            ['email', 'email', 'message' => 'Некорректный e-mail адресс']
-        ];
+        $str = explode(",", $imet);
+        $str = str_replace("'", '', $str);
+
+        return $str;
+    }
+
+    public function SearchSity()
+    {
+        $sity = array();
+        $tables = (new Query())
+            ->select('*')
+            ->from('area_name')
+            ->all();
+        foreach ($tables as $item) {
+             $sity[] = $item['name_area'];
+        }
+        return $sity;
+    }
+
+    public function SearchOblast()
+    {
+        $oblast = array();
+        $tables = (new Query())
+            ->select('*')
+            ->from('lviv_suburbs')
+            ->all();
+        foreach ($tables as $item) {
+            $oblast[] = $item['name'];
+        }
+        return $oblast;
+    }
+
+    public function SearchStrit()
+    {
+        $strit = array();
+        $tables = (new Query())
+            ->select('*')
+            ->from('small_area')
+           // ->where(['area_id' => $area_id])
+            ->all();
+        foreach ($tables as $item) {
+            $strit[] = $item['name'];
+        }
+        return $strit;
+    }
+
+    public function searchFilter()
+    {
+        $filter = array();
+        $tables = (new Query())
+            ->select('*')
+            ->from('filter')
+            ->all();
+        foreach ($tables as $item) {
+            $filter[] = $item;
+        }
+        return $filter;
+    }
+
+    public function searchResult()
+    {
+        $tr = array();
+
+        $check = array_push($tr, '');
+
+        return $check;
+
     }
 }

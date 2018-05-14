@@ -3,7 +3,6 @@ namespace frontend\controllers;
 
 use Yii;
 use yii\base\InvalidParamException;
-use yii\helpers\Html;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -13,7 +12,6 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use frontend\models\Filter;
 
 /**
  * Site controller
@@ -164,30 +162,6 @@ class SiteController extends Controller
         return $this->render('signup', [
             'model' => $model,
         ]);
-    }
-
-    public function actionFilter(){
-
-        $form = new Filter();
-            if ($form->load(Yii::$app->request->post()) && $form->validate())
-            {
-                $name = Html::encode($form->name);
-                $email = Html::encode($form->email);
-                $last_name = Html::encode($form->last_name);
-                $phone = Html::encode($form->phone);
-            }
-            else {
-                $name = '';
-                $email = '';
-                $last_name ='';
-            }
-        return $this->render('filter', [
-            'form' => $form,
-            'name' => $name,
-            'email' => $email,
-            'last_name' => $last_name,
-
-                ]);
     }
 
     /**

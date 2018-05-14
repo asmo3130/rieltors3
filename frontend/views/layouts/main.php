@@ -36,9 +36,19 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Главная', 'url' => ['/site/index']],
+        /*['label' => 'Заполнене заявки', 'url' => ['/site/about']],*/
+        ['label' => 'Форма аренды', 'url' => ['/form/index']],
+        /*['label' => 'Комерческая недвижемость', 'url' => ['/pages/index']],*/
+        /*['label' => 'Вакансии', 'url' => ['/pages/careers']],*/
+        ['label' => 'Новости', 'url' => ['/pages/news']],
+        ['label' => 'Статьи', 'url' => ['/pages/article']],
+        ['label' => 'Акции', 'url' => ['/pages/spesial']],
+        ['label' => 'Услуги', 'url' => ['/pages/services']],
+        ['label' => 'Контакты', 'url' => ['/pages/contacts']],
+        ['label' => 'О нас', 'url' => ['/pages/about']],
+        ['label' => 'Сдать/Продать', 'url' => ['/pages/sell']],
+        ['label' => 'Филтер', 'url' => ['/filter/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -65,6 +75,11 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
+
+        <?php if (isset($this->blocks['block1'])): ?>
+            <?php echo $this->blocks['block1'] ?>
+        <?php endif; ?>
+
         <?= $content ?>
     </div>
 </div>

@@ -10,6 +10,8 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['debug'],
+   // 'layout' => 'basic',
+    //'language' => 'ru_ru',
     'modules' => [
         'debug' => [
             'class' => 'yii\debug\Module',
@@ -49,8 +51,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',                                
+               '' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+/*                'pages/<url:[\w-]+>' => 'pages/aboutst',*/
             ],
         ],
     ],
