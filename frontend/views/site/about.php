@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <input type="text" name="">
         <input type="text" name="">
         <label>
-            <optoin type="text" value="1">123</optoin>
+            <optoin type="text" value="1">1</optoin>
             <optoin type="text" value="2">2</optoin>
             <optoin type="text" value="3">3</optoin>
         </label>

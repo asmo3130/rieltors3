@@ -21,7 +21,9 @@
         "dmstr/yii2-adminlte-asset": "^2.1",
         "githubjeka/yii2-gui-rbac": "*",
         "2amigos/yii2-tinymce-widget": "~1.1",
-        "kartik-v/yii2-widget-select2": "@dev"
+        "kartik-v/yii2-widget-select2": "@dev",
+        "vova07/yii2-imperavi-widget": "*",
+        "yiidoc/yii2-redactor": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

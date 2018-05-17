@@ -91,7 +91,7 @@ class Ads extends ActiveRecord
 
         $this->sendMail("deactive", $id);
 
-        return Url::to(['ads/nonregistered']);
+        return true;
     }
 
 }

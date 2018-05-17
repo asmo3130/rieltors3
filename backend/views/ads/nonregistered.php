@@ -8,6 +8,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\Pjax;
 
 $ads = $model::find()->where(['confirmed' => 0])->all();
 
@@ -90,6 +91,9 @@ foreach ($ads as $ad) :
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3">
+                        <?
+                        Pjax::begin();
+                        ?>
                         <div class="caption">
                             <p>
                                 <span>Этаж: </span>  <?=$ad["flors"];?>
@@ -106,6 +110,9 @@ foreach ($ads as $ad) :
                             <button class="btn btn-default btn-lg active confirm" data-button="<?=$url;?>" role="button">Подтвердить</button>
                             <button class="btn btn-default btn-lg active delete" data-button="<?=$url;?>" role="button">Delete</button>
                         </div>
+                        <?
+                        Pjax::end();
+                        ?>
                     </div>
 
 

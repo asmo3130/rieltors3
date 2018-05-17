@@ -29,6 +29,16 @@ class Articles extends ActiveRecord{
         return $pages;
     }
 
+    public function renderArt($id){
+        $art = (new \yii\db\Query())
+            ->select('*')
+            ->from('articles')
+            ->where(['id' =>$id])
+            ->all();
+
+        return $art;
+    }
+
     public function updates($id, $title, $content){
 
         Articles::updateAll(['content' => $content, 'title' => $title], ['id' => $id]);

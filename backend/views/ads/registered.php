@@ -7,12 +7,10 @@
  */
 
 use yii\helpers\Html;
-
+use yii\widgets\Pjax;
 
 $ads = $model::find()->where(['confirmed' => 1])->all();
 
-?>
-<?
 foreach ($ads as $ad) :
     echo "<pre>";
     //  var_dump($ad);
@@ -99,16 +97,13 @@ foreach ($ads as $ad) :
                                 </p>
                                 <p><span>Цена: </span><?=$ad["price"];?> UAH </p>
                                 <a href="confirm/?id=<?=$ad['id'];?>" class="btn btn-default btn-lg active" role="button">Подтвердить</a>
-                                <a href="deactive/?id=<?=$ad['id'];?>" class="btn btn-default btn-lg active" role="button">deactive</a>
+                                <button class="btn btn-default btn-lg deactive" data-button="<?=$ad['id'];?>" role="button">deactive</button>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 <? endforeach; ?>
 

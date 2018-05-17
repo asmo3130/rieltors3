@@ -24,6 +24,7 @@ return [
                 ]
             ]
         ],
+        'redactor' => 'yii\redactor\RedactorModule',
     ],
     'components' => [
 

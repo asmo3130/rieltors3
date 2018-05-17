@@ -15,34 +15,8 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
 class AdsController extends Controller
 {
-//    public function behaviors()
-//    {
-//        return [
-//            'access' => [
-//                'class' => AccessControl::className(),
-//                'rules' => [
-//                    [
-//                        'actions' => ['logout', 'index', 'registered', 'nonregistered', 'confirm'],
-//                        'allow' => true,
-//                    ],
-//                    [
-//                        'actions' => ['logout', 'index', 'registered', 'nonregistered', 'confirm'],
-//                        'allow' => true,
-//                        'roles' => ['@'],
-//                    ],
-//                ],
-//            ],
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-//                    'logout' => ['post'],
-//                ],
-//            ],
-//        ];
-//    }
 
     public function behaviors()
     {
@@ -108,11 +82,11 @@ class AdsController extends Controller
         }
 
         public function actionDeactive(){
-            $id = $_GET['id'];
+            $id = $_POST['button'];
 
             $model = new Ads();
             $model->doDeactive($id);
 
-            return $this->render('nonregistered',['model' => $model]);
+            return $this->render('registered',['model' => $model]);
         }
 }

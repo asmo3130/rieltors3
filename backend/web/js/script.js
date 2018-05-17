@@ -12,6 +12,7 @@ $(document).ready(function () {
     let r_del = $('.confirm_rielr_delete');
     let u_conf = $('.confirm_user');
     let u_del = $('.delete_user');
+    let deact = $('.deactive');
 
     confirm.on('click', function () {
         $.ajax({
@@ -25,6 +26,15 @@ $(document).ready(function () {
             });
     });
 
+    deact.on('click', function () {
+        $.ajax({
+            method: 'POST',
+            url: 'deactive',
+            data: deact.data()
+        }).done(function (data) {
+            window.location.href = "registered";
+        });
+    });
 
     u_del.on('click', function () {
         $.ajax({
@@ -49,7 +59,7 @@ $(document).ready(function () {
         }).done(function(data, form) {
                  alert(form);
             });
-        //debugger
+        debugger
         return false;
     });
 

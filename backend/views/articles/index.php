@@ -9,24 +9,16 @@
 //echo "articles";
 
 $articles = $model->articles();
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
 
 //var_dump($articles);
-?>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+foreach ($articles as $item) :?>
 
-    <!-- Include JS file. -->
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.min.js'></script>
-    <script>
-        $(function() {
-            $('#title').froalaEditor({toolbarInline: false})
-        });
-    </script>
-<?=$user["username"]?>
-<? foreach ($articles as $item) :?>
+
 <div class="container">
     <div class="row">
-
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"><?=$item['title']?></h3>
@@ -39,7 +31,7 @@ $articles = $model->articles();
                         <p>
                             <?=$item["content"]?>
                         </p>
-                        <button class="btn btn-primary" data-toggle="modal" data-target=".id_<?=$item['id'];?>">Редактировать</button>
+                        <a href="articles/<?=$item['url']?>" class="btn btn-default btn-lg active confirm_articles" data-button="<?=$url;?>" role="button">Подтвердить</a>
                     </div>
                 </div>
             </div>
@@ -54,31 +46,28 @@ $articles = $model->articles();
                         <div class="caption">
                             <form action="articles/updates" method="post">
                                 <p>
-<!--                                    <input type="text" name="title" value="">-->
                                     <textarea id="title" name="title"><?=$item["title"]?></textarea>
                                     <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                                     <input type="file" name="myfile">
                                 </p>
+                                <textarea name="" id="my-textarea-<?=$item['id']?>" cols="30" rows="10"><?=$item["content"]?></textarea>
+
+                                <img src="http://crystalittest.com.ua/backend/web/<?=$item["img"]?>" alt="">
                                 <p>
-<!--                                    <input type="text" name="content" value="--><?//=$item["content"]?><!--">-->
                                     <textarea id="content" name="content"><?=$item["content"]?></textarea>
                                     <input type="hidden" name="id" value="<?=$item['id'];?>">
                                 </p>
                                 <?
                                 $url = $item['id'];
                                 ?>
-                                <button class="btn btn-default btn-lg active confirm_articles" data-button="<?=$url;?>" role="button">Подтвердить</button>
+                                <a href="<?=$item['url']?>" class="btn btn-default btn-lg active confirm_articles" data-button="<?=$url;?>" role="button">Подтвердить</a>
                             </form>
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3">
                         <div class="caption">
-
-
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
