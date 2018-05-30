@@ -41,7 +41,9 @@ echo Select2::widget([
 'maximumInputLength' => 10
 ],
 ]);
-*/?>
+*/
+var_dump($model);
+?>
 
 <div id="tabs">
     <div class="tab whiteborder">Квартира</div>
@@ -140,20 +142,20 @@ echo Select2::widget([
         ];
         echo $form->field($model, 'floars')->dropDownList($model->FunStr($filter[0]['floars']),$params)->label('Выберите этаж'); ?>
 
-        <input name="che" type="checkbox" value="qwe"><span>Не первый</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Не последний</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Только первый</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Только последний</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Мебель</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>С ремонтом</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Без ремонта</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Бытовая техника</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Телевизор</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Близко к остановке</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Балкон</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Подземная парковка</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Парковка возле дома</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Кладовка/Подвал</span><br>
+        <input name="not_first" type="checkbox" value="1"><span>Не первый</span><br>
+        <input name="not_last" type="checkbox" value="1"><span>Не последний</span><br>
+        <input name="only_first" type="checkbox" value="1"><span>Только первый</span><br>
+        <input name="only_last" type="checkbox" value="1"><span>Только последний</span><br>
+        <input name="furniture" type="checkbox" value="1"><span>Мебель</span><br>
+        <input name="repair" type="checkbox" value="1"><span>С ремонтом</span><br>
+        <input name="not_repair" type="checkbox" value="1"><span>Без ремонта</span><br>
+        <input name="Appliances" type="checkbox" value="1"><span>Бытовая техника</span><br>
+        <input name="tv" type="checkbox" value="1"><span>Телевизор</span><br>
+        <input name="stop" type="checkbox" value="1"><span>Близко к остановке</span><br>
+        <input name="logia" type="checkbox" value="1"><span>Балкон</span><br>
+        <input name="underparking" type="checkbox" value="1"><span>Подземная парковка</span><br>
+        <input name="house_parking" type="checkbox" value="1"><span>Парковка возле дома</span><br>
+        <input name="pantry" type="checkbox" value="1"><span>Кладовка/Подвал</span><br>
 
         <?php echo Html::submitButton('Найти', ['class' => 'btn btn-success']) ?>
         <?php ActiveForm::end() ?>
@@ -263,18 +265,17 @@ echo Select2::widget([
         ];
         echo $form->field($model, 'floars')->dropDownList($model->FunStr($filter[0]['floars']),$params)->label('Выберите этаж'); ?>
 
-        <input name="che" type="checkbox" value="qwe"><span>Посуточно</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Дачный дом</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Только с фото</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Только с видео</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Дачный дом</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Мебель</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>С ремонтом</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Без ремонта</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Близко к остановке</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Гараж</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Басейн</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Камин</span><br>
+        <input name="rent" type="checkbox" value="1"><span>Посуточно</span><br>
+        <input name="country_house" type="checkbox" value="1"><span>Дачный дом</span><br>
+        <input name="with_photo" type="checkbox" value="1"><span>Только с фото</span><br>
+        <input name="with_video" type="checkbox" value="1"><span>Только с видео</span><br>
+        <input name="furniture" type="checkbox" value="1"><span>Мебель</span><br>
+        <input name="with_repair" type="checkbox" value="1"><span>С ремонтом</span><br>
+        <input name="not_repair" type="checkbox" value="1"><span>Без ремонта</span><br>
+        <input name="stop" type="checkbox" value="1"><span>Близко к остановке</span><br>
+        <input name="garage" type="checkbox" value="1"><span>Гараж</span><br>
+        <input name="pool" type="checkbox" value="1"><span>Басейн</span><br>
+        <input name="fireplace" type="checkbox" value="1"><span>Камин</span><br>
 
         <?php echo Html::submitButton('Найти', ['class' => 'btn btn-success']) ?>
         <?php ActiveForm::end() ?>
@@ -316,20 +317,29 @@ echo Select2::widget([
         echo $form->field($model, 'price_per_month_to')->dropDownList($model->FunStr($filter[0]['price_per_month_to']),$params)->label('Выберите стоимость участка'); ?>
 
 
-        <input name="che" type="checkbox" value="qwe"><span>Только с фото</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Только с видео</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Центральная дорога рядом</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Дом под снос</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Под застройку</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Сельскохозяйственного назначения</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>В пределах населенного пункта</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Вымощена дорога к участку</span><br>
-        <input name="che" type="checkbox" value="qwe"><span>Наличие коммуникаций </span><br>
+        <input name="with_photo" type="checkbox" value="qwe"><span>Только с фото</span><br>
+        <input name="with_video" type="checkbox" value="qwe"><span>Только с видео</span><br>
+        <input name="central_road" type="checkbox" value="qwe"><span>Центральная дорога рядом</span><br>
+        <input name="demolition" type="checkbox" value="qwe"><span>Дом под снос</span><br>
+        <input name="building" type="checkbox" value="qwe"><span>Под застройку</span><br>
+        <input name="agricultural" type="checkbox" value="qwe"><span>Сельскохозяйственного назначения</span><br>
+        <input name="locality" type="checkbox" value="qwe"><span>В пределах населенного пункта</span><br>
+        <input name="road" type="checkbox" value="qwe"><span>Вымощена дорога к участку</span><br>
+        <input name="communications" type="checkbox" value="qwe"><span>Наличие коммуникаций </span><br>
 
         <?php echo Html::submitButton('Найти', ['class' => 'btn btn-success']) ?>
         <?php ActiveForm::end() ?>
     </div>
 </div>
+
+<!-- Начало обьявлений -->
+<?php
+
+
+
+?>
+<iframe src="https://www.google.com/maps/d/embed?mid=1KDS9JjGtbbG4we5IkmY2tyr0DHjA4Nn5" width="640" height="480"></iframe>
+<!-- Конец обьявлления -->
 
 </body>
 </html>

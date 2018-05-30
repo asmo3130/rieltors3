@@ -52,4 +52,6 @@ class Articles extends ActiveRecord{
         return true;
     }
 
+
+
 }

@@ -37,12 +37,18 @@ class Ads extends ActiveRecord
     }
 
     public function sendMail($status, $id){
-        $massage_s = "Обьявление".$id ." подтвержденно";
 
-        $massage_f = "Обьявление".$id ." не подтвержденно";
-        $massage_f = "Обьявление".$id ." деактивировано";
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+
+        $massage_s = "Обьявление ".$id ." подтвержденно";
+
+        $massage_f = "Обьявление ".$id ." не подтвержденно";
+
+        $massage_d = "Обьявление ".$id ." деактивировано";
+
         if($status == true){
-            mail('nikolay_kolchin@i.ua', 'test', $massage_s);
+            mail('nikolay_kolchin@i.ua', 'test', $massage_s, $headers);
         }elseif ($status == false){
             mail('nikolay_kolchin@i.ua', 'test', $massage_f);
         }elseif($status == "deactive"){
@@ -90,6 +96,16 @@ class Ads extends ActiveRecord
         Ads::updateAll(['confirmed' => 0], [ 'id'=> $id]);
 
         $this->sendMail("deactive", $id);
+
+        return true;
+    }
+
+    public function updates( $area, $kitchen, $flor, $rooms, $price, $id){
+        Ads::updateAll(['price' => $price,
+                        'kitchen_area' => $kitchen,
+                        'total_area' => $area,
+                        'flors' => $flor,
+                        ], ['id' => $id]);
 
         return true;
     }

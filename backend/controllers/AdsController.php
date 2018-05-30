@@ -25,7 +25,7 @@ class AdsController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['nonregistered', 'registered', 'confirm', 'delete', 'deactive'],
+                        'actions' => ['nonregistered', 'registered', 'confirm', 'delete', 'deactive', 'updates'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -88,5 +88,13 @@ class AdsController extends Controller
             $model->doDeactive($id);
 
             return $this->render('registered',['model' => $model]);
+        }
+
+        public function actionUpdates(){
+
+            $model = new Ads();
+            $model->updates($_POST['area'],$_POST['kitchen'],$_POST['flor'],$_POST['rooms'],$_POST['price'], $_POST['id']);
+
+            return $this->render('nonregistered',['model' => $model]);
         }
 }

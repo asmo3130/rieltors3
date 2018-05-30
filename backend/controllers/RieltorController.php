@@ -23,15 +23,32 @@ class RieltorController extends Controller
     public function actionAdd(){
         $model = new Rieltor();
 
-        $model->add($_POST['name'], $_POST['phone'], $_POST['email'], $_POST['area']);
+        //var_dump($_FILES);
+
+        $path = 'upload/'; // директория для загрузки
+        $ext = array_pop(explode('.',$_FILES['myImage']['name'])); // расширение
+        $new_name = time().'.'.$ext; // новое имя с расширением
+        $full_path = $path.$new_name; // полный путь с новым именем и расширением
+
+        if($_FILES['myfile']['error'] == 0){
+            if(move_uploaded_file($_FILES['myImage']['tmp_name'], $full_path)){
+                $img = $full_path;
+            }
+        }
+
+       // var_dump($img);
+
+        $model->add($_POST['name'], $_POST['phone'], $_POST['email'], $_POST['area'], $img);
 
         return $this->render('index', ['model' => $model]);
     }
 
     public function actionDeletes(){
+
+
         $model = new Rieltor();
 
-        $model->deletes($_POST['button']);
+        $model->deletes($_POST['id']);
 
         return $this->render('index', ['model' => $model]);
     }

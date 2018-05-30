@@ -9,6 +9,7 @@
 namespace frontend\controllers;
 
 use app\models\Pages;
+use app\models\Filter;
 use yii\web\Controller;
 
 class PagesController extends Controller
@@ -62,6 +63,21 @@ class PagesController extends Controller
         return $this->render('a5', ['model' => $model]);
     }
 
+    public function actionResult(){
+        $model = new Filter();
+        $model->searchresult($_POST);
+        foreach ($)
+        $tables = (new Query())
+            ->select('*')
+            ->join(	'INNER JOIN',
+                'form_fields',
+                'TABLE_NAME_2.COLUMN =TABLE_NAME_1.COLUMN',
+
+            );
+
+        return $this->render('sell', ['model' => $model]);
+    }
+
     public function actionCareers()
     {
         $model = new Pages();
@@ -99,7 +115,7 @@ class PagesController extends Controller
 
     public function actionSell()
     {
-        $model = new Pages();
+        $model = new Filter();
 
         return $this->render('sell', ['model' => $model]);
     }

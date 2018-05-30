@@ -132,7 +132,7 @@ a.desc:after {
     border-radius: 3px 3px 0  0;
 }
 #tabs .tabContent {
-    width: 300px;
+   /* width: 300px; */
     border: 1px solid #707070;
     position: relative;
     top: -1px;
@@ -144,7 +144,7 @@ a.desc:after {
     display: none;
 }
 #tabs .show {
-    display: block;
+    /*display: block; */
 }
 .field-filter-sity
 {

@@ -92,6 +92,7 @@ class ArticlesController extends Controller
         $model->updates($_POST['id'], $_POST['title'], $_POST['content']);
 
 
+
         return $this->render('index', ['model' => $model]);
     }
 }

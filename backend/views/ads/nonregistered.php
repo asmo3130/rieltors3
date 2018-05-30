@@ -45,7 +45,8 @@ foreach ($ads as $ad) :
                     <p>
                         <span>Площадь кухни: </span>  <?=$ad["kitchen_area"];?>
                     </p>
-
+                    <input type="hidden" name="id" value="<?=$ad['id']?>" placeholder="name">
+                    <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                 </div>
             </div>
             <div class="col-xs-6 col-md-3">
@@ -58,6 +59,7 @@ foreach ($ads as $ad) :
                     </p>
                     <p><span>Цена: </span><?=$ad["price"];?> UAH </p>
                     <button class="btn btn-primary" data-toggle="modal" data-target=".id_<?=$ad['id'];?>">Подробнее</button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".id_red_<?=$ad['id'];?>">Red</button>
                 </div>
             </div>
 
@@ -120,6 +122,58 @@ foreach ($ads as $ad) :
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade bs-example-modal-lg id_red_<?=$ad['id'];?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="panel-body">
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="<?=$ad["photo_upload"];?>" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="caption">
+                            <form action="updates" method="post">
+                            <p>
+                                <span>Количество комнат: </span> <input type="text" name="rooms" value="<?=$ad['rooms'];?>">
+                            </p>
+                            <p>
+                                <span>Общая площадь: </span> <input type="text" name="area" value="<?=$ad['total_area'];?>">
+                            </p>
+                            <p>
+                                <span>Площадь кухни: </span>  <input type="text" name="kitchen" value="<?=$ad["kitchen_area"];?>">
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="caption">
+                            <p>
+                                <span>Этаж: </span>  <input type="text" name="flor" value="<?=$ad["flors"];?>">
+                            </p>
+                            <p>
+                                <span>Этажей в доме: </span>  <input type="total_flors" name="rooms" value="<?=$ad['total_area'];?>">
+                            </p>
+                            <p><span>Цена: </span><input type="text" name="price" value="<?=$ad["price"];?>"> UAH </p>
+                            <input type="hidden" name="id" value="<?=$ad['id']?>" />
+                            <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
+                            <?
+                            $url = $ad['id'];
+                            ?>
+                            <button class="btn btn-default btn-lg active red" type="submit" role="button">Подтвердить</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     </div>
 <? endforeach; ?>

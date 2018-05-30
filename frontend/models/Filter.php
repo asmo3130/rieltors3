@@ -58,7 +58,6 @@ class Filter extends ActiveRecord
         $tables = (new Query())
             ->select('*')
             ->from('small_area')
-           // ->where(['area_id' => $area_id])
             ->all();
         foreach ($tables as $item) {
             $strit[] = $item['name'];
@@ -79,13 +78,15 @@ class Filter extends ActiveRecord
         return $filter;
     }
 
-    public function searchResult()
+    public function searchresult($data)
     {
-        $tr = array();
+        $data[] = $data;
 
-        $check = array_push($tr, '');
+        echo "<pre>";
+        var_dump($data);
+        echo "</pre>";
 
-        return $check;
+        return true;
 
     }
 }

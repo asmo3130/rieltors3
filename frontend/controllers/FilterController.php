@@ -35,7 +35,7 @@ class FilterController extends AppController
     }
 
     public function actionResult(){
-
+    // нужно написать метод в котором будеть выбираться все, а в случае передачи данных будем фильтровать выборку
         $model = new Filter();
         $model->searchResult($_POST);
 

@@ -19,10 +19,16 @@ return [
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['admin'] // all auth users
+                        'roles' => ['@'] // all auth users
                     ],
                 ]
             ]
+        ],
+            'models' => [
+                'class' => 'app\models\Action',
+            ],
+        'app' => [
+            'class' => 'app\modules\actions\module',
         ],
         'redactor' => 'yii\redactor\RedactorModule',
     ],

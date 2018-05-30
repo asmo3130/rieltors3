@@ -13,6 +13,7 @@ $(document).ready(function () {
     let u_conf = $('.confirm_user');
     let u_del = $('.delete_user');
     let deact = $('.deactive');
+    let action_red = $('.action-red');
 
     confirm.on('click', function () {
         $.ajax({
@@ -25,6 +26,18 @@ $(document).ready(function () {
                 window.location.href = 'nonregistered';
             });
     });
+
+    // action_red.on('click', function () {
+    //     $.ajax({
+    //         method: "POST",
+    //         url: "action/edit",
+    //         data: action_red.data()
+    //     })
+    //         .done(function(data) {
+    //             alert(data);
+    //         });
+    //     return false;
+    // });
 
     deact.on('click', function () {
         $.ajax({
@@ -59,7 +72,7 @@ $(document).ready(function () {
         }).done(function(data, form) {
                  alert(form);
             });
-        debugger
+        //debugger
         return false;
     });
 
@@ -92,11 +105,12 @@ $(document).ready(function () {
         $.ajax({
             method: "POST",
             url: "rieltor/deletes",
-            data: r_del.data()
+            data: $('form').serialize()
         })
             .done(function(data) {
                 alert(data);
             });
+        //debugger
         return false;
     });
 

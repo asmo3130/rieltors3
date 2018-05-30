@@ -18,6 +18,7 @@ $area = $model->getArea();
             <div class="panel-body">
 
                 <div class="col-xs-6 col-md-3">
+
                     <div class="caption">
                         <form action="rieltor/add" method="post" enctype="multipart/form-data">
                             <select name="area" id="area">
@@ -37,6 +38,7 @@ $area = $model->getArea();
                                 <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                                 <input type="phone" name="phone" value="" placeholder="phone">
                                 <input type="email" name="email" value="" placeholder="email">
+                                <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg">
                             </p>
                             <button class="btn btn-default btn-lg active confirm_articles" role="button">Подтвердить</button>
                         </form>
@@ -65,6 +67,16 @@ $area = $model->getArea();
             </div>
             <div class="panel-body">
                 <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                        <?
+                        if ($item['img'] !== ''){
+                            ?>
+                            <img src="/backend/web/<?=$item['img']?>" alt="..." style="height: 300px;">
+                            <?
+                        }
+                        ?>
+
+                    </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
                     <div class="caption">
@@ -87,9 +99,10 @@ $area = $model->getArea();
 
                 <div class="col-xs-6 col-md-3">
                     <div class="caption">
-                        <form method="post">
+                        <form method="post" action="rieltor/update">
                             <p>
                                 <input type="text" name="name" value="<?=$item['name']?>" placeholder="name">
+                                <input type="hidden" name="id" value="<?=$item['id']?>" placeholder="name">
                                 <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                                 <input type="phone" name="phone" value="<?=$item['phone']?>" placeholder="phone">
                                 <input type="email" name="email" value="<?=$item['email']?>" placeholder="email">
@@ -103,7 +116,7 @@ $area = $model->getArea();
                                 </select>
                             </p>
                             <button class="btn btn-default btn-lg active confirm_rielr_update" role="button">Подтвердить</button>
-                            <button class="btn btn-default btn-lg active confirm_rielr_delete" data-button="<?=$item['id']?>" role="button">Удалить</button>
+                            <button class="btn btn-default btn-lg active confirm_rielr_delete" role="button">Удалить</button>
                         </form>
 
                     </div>

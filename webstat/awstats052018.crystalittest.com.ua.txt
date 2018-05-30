@@ -8,33 +8,33 @@ AWSTATS DATA FILE 7.0 (build 1.971)
 # update).
 BEGIN_MAP 27
 POS_GENERAL 2000                
-POS_TIME 2688                
-POS_VISITOR 10128               
-POS_DAY 10360               
-POS_DOMAIN 3349                
-POS_LOGIN 3584                
-POS_ROBOT 3739                
-POS_WORMS 3871                
-POS_EMAILSENDER 4002                
-POS_EMAILRECEIVER 4145                
-POS_SESSION 10696               
-POS_SIDER 10891               
-POS_FILETYPES 4280                
-POS_DOWNLOADS 4513                
-POS_OS 4561                
-POS_BROWSER 4630                
-POS_SCREENSIZE 4729                
-POS_UNKNOWNREFERER 4803                
-POS_UNKNOWNREFERERBROWSER 4890                
-POS_ORIGIN 4972                
-POS_SEREFERRALS 5113                
-POS_PAGEREFS 5257                
-POS_SEARCHWORDS 5405                
-POS_KEYWORDS 5557                
-POS_MISC 2350                
-POS_ERRORS 5616                
-POS_CLUSTER 3440                
-POS_SIDER_404 5773                
+POS_TIME 2685                
+POS_VISITOR 12016               
+POS_DAY 12254               
+POS_DOMAIN 3447                
+POS_LOGIN 3682                
+POS_ROBOT 3837                
+POS_WORMS 3969                
+POS_EMAILSENDER 4100                
+POS_EMAILRECEIVER 4243                
+POS_SESSION 12886               
+POS_SIDER 13092               
+POS_FILETYPES 4378                
+POS_DOWNLOADS 4613                
+POS_OS 4661                
+POS_BROWSER 4747                
+POS_SCREENSIZE 4871                
+POS_UNKNOWNREFERER 4945                
+POS_UNKNOWNREFERERBROWSER 5032                
+POS_ORIGIN 5114                
+POS_SEREFERRALS 5255                
+POS_PAGEREFS 5399                
+POS_SEARCHWORDS 5547                
+POS_KEYWORDS 5699                
+POS_MISC 2347                
+POS_ERRORS 5758                
+POS_CLUSTER 3538                
+POS_SIDER_404 5929                
 END_MAP
 
 # LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
@@ -46,14 +46,14 @@ END_MAP
 # MonthHostsKnown   = Number of hosts known
 # MonthHostsUnKnown = Number of hosts unknown
 BEGIN_GENERAL 8
-LastLine 20180516175715 1125 294602 15282965259493
+LastLine 20180529025038 910 232121 11536419392987
 FirstTime 20180503100540
-LastTime 20180516175706
-LastUpdate 20180517045134 1125 0 1125 0 0
-TotalVisits 22                  
-TotalUnique 2                   
+LastTime 20180529025038
+LastUpdate 20180529045332 910 0 910 0 0
+TotalVisits 49                  
+TotalUnique 3                   
 MonthHostsKnown 0                   
-MonthHostsUnknown 2                   
+MonthHostsUnknown 3                   
 END_GENERAL
 
 # Misc ID - Pages - Hits - Bandwidth
@@ -63,7 +63,7 @@ JavaEnabled 0 0 0
 JavascriptDisabled 0 0 0
 PDFSupport 0 0 0
 WindowsMediaPlayerSupport 0 0 0
-AddToFavourites 0 723 0
+AddToFavourites 0 940 0
 RealPlayerSupport 0 0 0
 TotalMisc 0 0 0
 DirectorSupport 0 0 0
@@ -72,9 +72,9 @@ END_MISC
 
 # Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
 BEGIN_TIME 24
-0 0 0 0 0 0 0
-1 0 0 0 0 0 0
-2 0 0 0 0 0 0
+0 26 35 657633 2 2 55420
+1 4 36 538896 5 9 71798
+2 128 622 9075571 31 63 377950
 3 0 0 0 0 0 0
 4 0 0 0 0 0 0
 5 0 0 0 0 0 0
@@ -82,26 +82,26 @@ BEGIN_TIME 24
 7 0 0 0 0 0 0
 8 0 0 0 0 0 0
 9 0 0 0 0 0 0
-10 354 736 9014017 68 108 535652
-11 785 1835 23397991 143 310 1821916
-12 181 617 8858883 31 96 698841
-13 675 1544 18753307 76 199 1658043
-14 561 1706 23785435 71 168 860994
-15 501 1517 22723652 31 51 189925
-16 577 1492 20033821 73 128 805030
-17 500 1098 14284299 76 159 1459495
-18 165 368 4528965 83 183 2393741
-19 2 2 7196 1 2 35183
-20 0 0 0 0 0 0
-21 0 0 0 0 0 0
-22 0 0 0 0 0 0
-23 0 0 0 0 0 0
+10 502 1352 17256758 82 136 652994
+11 879 2052 26083964 163 339 1846897
+12 222 784 11106542 47 116 729954
+13 859 2135 26391268 100 257 1969606
+14 813 2828 39618017 146 275 1674295
+15 849 2157 30366086 105 155 962822
+16 795 2260 31383230 148 269 2252869
+17 643 1856 29405204 94 184 1584496
+18 256 500 6221292 89 189 2414780
+19 25 79 649958 4 7 57540
+20 22 87 1227319 12 14 55293
+21 21 150 2175758 6 7 22497
+22 5 23 284545 5 5 24399
+23 19 28 346339 2 3 55450
 END_TIME
 
 # Domain - Pages - Hits - Bandwidth
 # The 10 first Pages must be first (order not required for others)
 BEGIN_DOMAIN 1
-ip 4301 10915 145387566
+ip 6068 16984 232788380
 END_DOMAIN
 
 # Cluster ID - Pages - Hits - Bandwidth
@@ -135,14 +135,14 @@ END_EMAILRECEIVER
 
 # Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
 BEGIN_FILETYPES 8
-css 2358 22028637 0 0
-png 10 44593 0 0
-woff2 381 29185734 0 0
-map 11 681606 0 0
-html 185 975025 0 0
-js 3038 57178977 0 0
-jpg 1208 11845908 0 0
-Unknown 3724 23447086 0 0
+css 3868 34870606 0 0
+png 19 58433 0 0
+woff2 615 46996755 0 0
+map 22 1514680 0 0
+html 312 2203590 0 0
+js 5061 91897174 0 0
+jpg 1968 24101453 0 0
+Unknown 5119 31145689 0 0
 END_FILETYPES
 
 # Downloads - Hits - Bandwidth
@@ -150,15 +150,17 @@ BEGIN_DOWNLOADS 0
 END_DOWNLOADS
 
 # OS ID - Hits
-BEGIN_OS 3
-winnt 3425
-linux 7445
+BEGIN_OS 4
+linuxandroid 13
+winnt 3836
+linux 13090
 win7 45
 END_OS
 
 # Browser ID - Hits
-BEGIN_BROWSER 2
-chrome66.0.3359.139 10870
+BEGIN_BROWSER 3
+chrome66.0.3359.181 1131
+chrome66.0.3359.139 15808
 chrome65.0.3325.181 45
 END_BROWSER
 
@@ -176,11 +178,11 @@ END_UNKNOWNREFERERBROWSER
 
 # Origin - Pages - Hits 
 BEGIN_ORIGIN 6
-From0 226 226
+From0 403 403
 From1 0 0
 From2 0 0
 From3 0 0
-From4 4075 10689
+From4 5665 16581
 From5 0 0
 END_ORIGIN
 
@@ -204,95 +206,125 @@ BEGIN_KEYWORDS 0
 END_KEYWORDS
 
 # Errors - Hits - Bandwidth
-BEGIN_ERRORS 6
-403 42 125137
-302 16 8210
+BEGIN_ERRORS 7
+403 54 187620
 503 1 469
-400 37 176783
-500 298 8193964
-404 287 1548654
+302 25 15000
+400 133 638975
+500 487 11470156
+301 3 1428
+404 387 1968497
 END_ERRORS
 
 # URL with 404 errors - Hits - Last URL referer
-BEGIN_SIDER_404 66
+BEGIN_SIDER_404 94
 /admin/articles/articles/deletes 1 http://crystalittest.com.ua/admin/articles/updates
 /pages/careers 5 http://crystalittest.com.ua/pages/careers
 /pages/testtest%20onas22 5 http://crystalittest.com.ua/pages/about
 /real 1 -
-/admin/rieltor/rieltor/deletes 3 http://crystalittest.com.ua/admin/rieltor/add
-/admin/rieltor/rieltor/add 3 http://crystalittest.com.ua/admin/rieltor/
-/admin/articles/articles/updates 10 http://crystalittest.com.ua/admin/articles/updates
+/admin/rieltor/rieltor/deletes 8 http://crystalittest.com.ua/admin/rieltor/add
+/admin/upload/1527550282.jpg 1 http://crystalittest.com.ua/admin/rieltor
+/admin/rieltor/rieltor/add 4 http://crystalittest.com.ua/admin/rieltor/
+/admin/articles/articles/updates 11 http://crystalittest.com.ua/admin/articles/updates
 /reals/index 1 http://crystalittest.com.ua/reals/index
 /pages/t2.php 5 http://crystalittest.com.ua/pages/about
+/pages/result 4 http://crystalittest.com.ua/pages/sell
 /pages/testtest%20onas 8 http://crystalittest.com.ua/pages/about
+/admin/edit 3 http://crystalittest.com.ua/admin/action
 /pages/web/upload/1525510506.jpg 1 http://crystalittest.com.ua/pages/article
-/admin/rieltor/updates 10 http://crystalittest.com.ua/admin/rieltor/
+/admin/action/novaya-novost.php 1 -
 /admin/deletes 19 http://crystalittest.com.ua/admin/update
+/admin/rieltor/updates 28 http://crystalittest.com.ua/admin/rieltor/
+/admin/articles/articles/article1 1 http://crystalittest.com.ua/admin/articles/updates
 /admin/upload/index 2 http://crystalittest.com.ua/admin/users/upload
-/admin/users/delete 6 http://crystalittest.com.ua/admin/users/index
 /admin/rieltors 8 http://crystalittest.com.ua/admin/rieltors
+/admin/users/delete 6 http://crystalittest.com.ua/admin/users/index
 /admin/users/upload 2 http://crystalittest.com.ua/admin/users/index
 /pages/contacts 5 http://crystalittest.com.ua/pages/spesial
 /admin/site/ads/nonregistered 1 http://crystalittest.com.ua/admin/site/login
 /admin/uploads 1 -
 /admin/ads/deactive/delete 2 http://crystalittest.com.ua/admin/ads/deactive/
-/admin/upload 7 -
+/admin/upload 16 -
 /pages/upload/1525510506.jpg 1 http://crystalittest.com.ua/pages/article
 /images/buttons.gif 4 http://crystalittest.com.ua/admin/css/jquery.cleditor.css
+/admin/sit 1 -
 /pages/t7.php 3 http://crystalittest.com.ua/pages/about
 /pages/spesial 7 http://crystalittest.com.ua/pages/spesial
+/admin/articles/deactive 1 http://crystalittest.com.ua/admin/articles/article1
+/admin/rieltor/rieltor/updates 4 http://crystalittest.com.ua/admin/rieltor/update
 /pages/s1 1 http://crystalittest.com.ua/pages/services
 /admin/delete 2 http://crystalittest.com.ua/admin/update
 /filter/'%20+%20repo.owner.avatar_url%20+%20' 1 http://crystalittest.com.ua/filter/index
 /admin/ads/upload 1 http://crystalittest.com.ua/admin/ads/registered
 /pages/Array 1 http://crystalittest.com.ua/pages/about
 /pages/aboutst 1 -
+/admin/articles/articles/article4 1 http://crystalittest.com.ua/admin/articles/updates
+/backend/ 2 -
 /pages/news 3 http://crystalittest.com.ua/pages/about
+/admin/articles/articles/article2 1 http://crystalittest.com.ua/admin/articles/updates
 /admin/site/users/index 1 http://crystalittest.com.ua/admin/site/login
 /admin/default/image-upload 1 http://crystalittest.com.ua/admin/articles
 /pages/t7 1 http://crystalittest.com.ua/pages/about
 /admin/users/confirm 7 http://crystalittest.com.ua/admin/users/index
+/admin/admin/upload/1527550282.jpg 1 http://crystalittest.com.ua/admin/rieltor
 /admin/users/nonregistered 8 http://crystalittest.com.ua/admin/users/index
 /pages/t6.php 5 http://crystalittest.com.ua/pages/about
 /pages/onas22 6 http://crystalittest.com.ua/pages/about
 /pages/testtest%20onas2 6 http://crystalittest.com.ua/pages/about
+/upload/1527550295.jpg 8 http://crystalittest.com.ua/admin/rieltor
 /admin/blog/image-upload 1 http://crystalittest.com.ua/admin/articles/updates
+/admin/add 1 http://crystalittest.com.ua/admin/action
+/pages/searchresult 3 http://crystalittest.com.ua/pages/sell
+/admin/rieltor/rieltor/update 4 http://crystalittest.com.ua/admin/rieltor/update
 /admin/confirm 2 http://crystalittest.com.ua/admin/update
+/admin/ads/ads/updates 6 http://crystalittest.com.ua/admin/ads/nonregistered
+/admin/action/action/edit 1 http://crystalittest.com.ua/admin/action/add
 /real/index 17 -
+/admin/action/novaya-novost 2 -
 /post/view 3 http://crystalittest.com.ua/pages/about
-/pages/sell 3 http://crystalittest.com.ua/pages/about
+/pages/sell 4 http://crystalittest.com.ua/pages/about
 /admin/users/user/confirm 1 http://crystalittest.com.ua/admin/users/index
+/admin/upload/1527550295.jpg 1 http://crystalittest.com.ua/admin/rieltor
+/admin/admin/ 1 http://crystalittest.com.ua/admin/rieltor
 /pages/about 2 http://crystalittest.com.ua/pages/contacts
 /pages/t1.php 8 http://crystalittest.com.ua/pages/about
 /admin/css/images/buttons.gif 8 http://crystalittest.com.ua/admin/css/jquery.cleditor.css
+/upload 1 -
 /admin/articles/deletes 3 http://crystalittest.com.ua/admin/articles
 /pages/backend/web/upload/1525510506.jpg 1 http://crystalittest.com.ua/pages/article
-/admin/updates 1 -
-/pages/onas 15 http://crystalittest.com.ua/pages/about
+/admin/ads/confirm/updates 1 http://crystalittest.com.ua/admin/ads/confirm/
 /pages/t5.php 1 http://crystalittest.com.ua/pages/about
+/pages/onas 15 http://crystalittest.com.ua/pages/about
+/admin/updates 1 -
 /pages/t4.php 5 http://crystalittest.com.ua/pages/about
 /pages/carerrs 2 -
 /admin/css/images/toolbar.gif 8 http://crystalittest.com.ua/admin/css/jquery.cleditor.css
 /admin/update/delete 2 http://crystalittest.com.ua/admin/update
+/upload/1527550282.jpg 8 http://crystalittest.com.ua/admin/rieltor
 /admin/rieltor/update 3 http://crystalittest.com.ua/admin/rieltor/
+/admin/admin/upload/1527550295.jpg 1 http://crystalittest.com.ua/admin/rieltor
+/index.php 1 -
+/admin/articles/upload/5afd90e00c739.jpg 1 http://crystalittest.com.ua/admin/articles/article2
 /pages/t3.php 2 http://crystalittest.com.ua/pages/about
 /admin/article1 1 http://crystalittest.com.ua/admin/articles
 /pages/onas2 14 http://crystalittest.com.ua/pages/about
 /pages/services 5 http://crystalittest.com.ua/pages/contacts
+/admin/default/images-get 12 http://crystalittest.com.ua/admin/articles
 /images/toolbar.gif 4 http://crystalittest.com.ua/admin/css/jquery.cleditor.css
-/admin/default/images-get 9 http://crystalittest.com.ua/admin/articles
+/pages/searchResult 1 http://crystalittest.com.ua/pages/sell
 END_SIDER_404
 
 # Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
 # [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
 # The 10 first Hits must be first (order not required for others)
-BEGIN_VISITOR 2
-94.158.74.39 4262 10870 145067859 20180516175706 20180516175520 /admin/assets/6dde9ac6/fonts/fontawesome-webfont.woff2
+BEGIN_VISITOR 3
+94.158.74.39 5767 15836 216896581 20180525163429
+37.57.242.177 262 1103 15572092 20180529025038 20180529000624 /admin/action
 172.16.0.104 39 45 319707 20180503163131
 END_VISITOR
 
 # Date - Pages - Hits - Bandwidth - Visits
-BEGIN_DAY 10
+BEGIN_DAY 21
 20180503 1254 1895 18192638 2
 20180504 1160 2334 26583820 2
 20180505 730 1893 24612336 3
@@ -303,86 +335,120 @@ BEGIN_DAY 10
 20180514 86 431 5973346 3
 20180515 135 957 16658242 3
 20180516 260 1092 16442877 3
+20180517 142 1044 19827780 2
+20180518 317 814 10102601 3
+20180521 152 220 2859912 4
+20180522 596 1024 11709506 1
+20180523 88 527 7481056 3
+20180524 122 818 12449433 3
+20180525 88 519 7398434 3
+20180526 9 42 576546 1
+20180527 44 237 3393203 3
+20180528 51 131 1330243 3
+20180529 158 693 10272100 1
 END_DAY
 
 # Session range - Number of visits
-BEGIN_SESSION 6
-1h+ 14
-15mn-30mn 1
+BEGIN_SESSION 7
+1h+ 27
+5mn-15mn 3
+15mn-30mn 3
+0s-30s 5
 2mn-5mn 1
-30s-2mn 1
-0s-30s 3
-30mn-1h 1
+30s-2mn 3
+30mn-1h 6
 END_SESSION
 
 # URL - Pages - Bandwidth - Entry - Exit
 # The 10 first Pages must be first (order not required for others)
-BEGIN_SIDER 67
-/debug/default/toolbar 1964 7005934 2 7
-/admin/assets/6dde9ac6/fonts/fontawesome-webfont.woff2 376 29094504 0 3
-/pages/about 249 1908432 0 0
-/admin/articles 233 1311097 4 2
-/admin/update 146 795638 1 0
-/filter/index 146 6282551 2 0
-/admin/rieltor 107 575296 2 4
-/admin/users/index 102 605692 1 0
-/backend/web/ 92 437748 0 3
-/pages/services 88 681125 0 0
+BEGIN_SIDER 89
+/debug/default/toolbar 2500 8932740 4 12
+/admin/assets/6dde9ac6/fonts/fontawesome-webfont.woff2 605 46814295 1 11
+/pages/about 256 1963551 0 0
+/admin/articles 255 1436437 5 2
+/admin/rieltor 210 1149411 5 5
+/filter/index 162 7019068 3 0
+/admin/action 154 763608 1 4
+/admin/update 152 829516 1 0
+/backend/web/ 148 706978 0 3
+/admin/users/index 118 708574 2 1
 /pages/careers 13 98390 0 0
-/ 33 266175 4 0
+/ 77 631382 8 0
+/filter/result 17 374870 0 2
 /pages 2 15253 0 0
 /reals/index 10 259659 0 0
 /pages/t2 6 45138 0 0
-/admin/articles/article1 9 42376 1 0
-/admin/assets/44f2ad48/fonts/glyphicons-halflings-regular.woff2 5 91230 0 0
+/pages/result 11 35623 0 0
+/admin/gii/form 1 3223 0 0
+/admin/articles/article1 78 382900 4 2
+/filter/ 11 506317 2 0
+/admin/gii/extension 1 3712 0 0
+/admin/assets/44f2ad48/fonts/glyphicons-halflings-regular.woff2 8 145968 0 0
 /admin/users/delete 8 48885 0 0
-/pages/contacts 17 128545 0 0
-/pages/article 43 337195 0 0
-/pages/a2 7 55146 0 0
-/admin/rieltor/deletes 11 59085 0 0
-/site/signup 6 50876 0 0
-/form/index 21 174595 0 0
+/pages/contacts 24 181602 0 0
+/pages/article 50 394417 0 0
+/admin/articles/article2 18 88565 0 0
+/pages/a2 9 71111 0 0
+/admin/rieltor/deletes 24 97813 0 0
+/site/signup 13 110108 0 0
+/form/index 31 258281 0 0
 /pages/a4 1 7882 0 0
-/admin/rieltor/ 17 93191 0 0
-/pages/spesial 27 205022 0 0
-/pages/s1 10 77517 0 0
+/admin/gii/controller 9 30073 1 0
+/pages/spesial 32 244532 0 0
+/admin/rieltor/ 23 126379 0 0
+/pages/ 2 16012 0 0
+/pages/s1 11 85217 0 0
 /pages/aboutst 14 106097 1 0
+/admin/gii/module 12 36481 0 0
 /pages/t5 1 7525 0 0
-/admin/site/login 34 39002 0 0
-/admin/ 24 104812 0 0
-/pages/news 22 167052 0 0
+/admin/site/login 38 45294 0 0
+/admin/ 31 137756 0 0
+/admin/gii/crud 7 27116 0 2
 /site/captcha 4 11955 0 0
+/pages/news 26 198015 0 0
+/admin/default/image-upload 16 10984 0 0
+/admin/users/confirm 42 262125 0 0
 /pages/t7 6 45455 0 0
-/admin/users/confirm 40 249621 0 0
-/admin/ads/nonregistered 62 327471 0 0
-/admin/ads/confirm 15 80936 0 0
+/admin/ads/nonregistered 115 618155 0 0
+/admin/gii 2 4272 0 0
+/admin/action/edit 18 74878 1 2
+/admin/ads/confirm 24 128296 0 0
 /site/about 3 63379 0 0
 /site/contact 4 34258 0 0
 /pages/s7 5 38306 0 0
-/admin/articles/updates 48 210490 0 0
-/assets/44f2ad48/css/bootstrap.css.map 2 75734 0 0
+/admin/articles/updates 52 228564 0 0
+/assets/44f2ad48/css/bootstrap.css.map 7 454404 0 0
 /pages/a5 1 7708 0 0
-/pages/sell 9 68040 0 0
-/admin/ads/deactive/ 16 63205 0 0
+/pages/sell 88 818180 0 0
 /pages/index 10 76369 0 0
-/admin/articles/article4 1 4542 0 0
-/admin/ads/registered 72 380928 0 0
-/admin/ads/deactive 9 46565 0 0
-/admin/ads/delete 3 15445 0 0
-/site/login 3 25001 0 0
-/admin/rieltor/add 14 76540 1 0
-/pages/a1 16 125052 0 0
-/admin/ads/confirm/ 3 9894 0 0
-/admin 20 94596 3 0
+/admin/ads/deactive/ 16 63205 0 0
+/admin/ads/updates 6 28222 0 0
+/admin/articles/article4 3 14556 0 0
+/admin/gii/model 15 71921 0 0
+/admin/ads/registered 90 475698 0 0
+/admin/ads/delete 5 24533 0 0
+/admin/ads/deactive 17 88188 0 0
+/debug/default/index 5 27214 0 0
+/admin/rieltor/add 27 112709 1 0
+/site/login 6 49987 0 0
+/pages/a1 17 133076 0 0
+/admin/articles/article3 2 9777 0 0
+/admin/ads/confirm/ 4 15561 0 0
 /admin/articles/deletes 5 27756 0 0
+/admin 38 181655 8 0
+/assets/44f2ad48/fonts/glyphicons-halflings-regular.woff2 2 36492 0 0
 /pages/a3 1 7705 0 0
 /pages/t1 26 197949 0 0
-/pages/s6 1 7716 0 0
-/pages/t3 6 45140 0 0
 /admin/update/delete 22 14652 0 0
+/pages/t3 6 45140 0 0
+/pages/s6 1 7716 0 0
+/admin/rieltor/update 19 91072 1 0
 /pages/s3 1 7699 0 0
-/admin/update/deletes 17 41732 0 1
-/admin/assets/44f2ad48/css/bootstrap.css.map 9 605872 0 1
+/admin/update/deletes 19 53018 0 1
+/admin/assets/44f2ad48/css/bootstrap.css.map 15 1060276 0 1
+/pages/services 95 737607 0 0
+/debug/default/view 18 205328 0 0
 /pages/t6 2 15381 0 0
 /pages/s2 1 7694 0 0
+/admin/action/add 8 25865 0 0
 END_SIDER

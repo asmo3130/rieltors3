@@ -34,13 +34,14 @@ class Rieltor extends ActiveRecord{
         return $rieltors;
     }
 
-    public function add($name, $phone, $email, $area){
+    public function add($name, $phone, $email, $area, $img){
 
         $rieltor = new Rieltor();
         $rieltor->name = $name;
         $rieltor->phone = $phone;
         $rieltor->email = $email;
         $rieltor->area = $area;
+        $rieltor->img = $img;
         $rieltor->insert();
 
         return true;
@@ -49,18 +50,18 @@ class Rieltor extends ActiveRecord{
     public function deletes($id)
     {
         $room = Rieltor::findOne($id);
-        $room->deleteAll('id ='.$id);
+        $room->deleteAll('id='.$id);
+
+        //var_dump(Rieltor::deleteAll(['id='.$id]));
 
         return true;
     }
 
     public function updates($name, $phone, $email, $id)
     {
-        var_dump($name);
+       // var_dump($name);
 
         Rieltor::updateAll(['name'=>$name, 'phone'=>$phone,'email'=>$email],['id'=>$id]);
-
-
 
         return true;
     }
