@@ -6,7 +6,6 @@
  * Time: 15:11
  */
 
-echo "article1";
 $art = $model->renderArt('18');
 
 

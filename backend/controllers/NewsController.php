@@ -49,6 +49,7 @@ class NewsController extends Controller
         $model = new Action();
         $model->edit($_POST['url']);
 
+        var_dump($_POST['url']);
 
         return $this->render($_POST['url'] , ['model' => $model]);
     }

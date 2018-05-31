@@ -11,7 +11,7 @@ use yii\base\Model;
 use yii\db\ActiveRecord;
 use yii\helpers\Url;
 
-class News extends ActiveRecord
+class Services extends ActiveRecord
 {
     public static function  tableName(){
         return 'articles';
@@ -41,10 +41,6 @@ class News extends ActiveRecord
 
     public function add($name, $uri){
 
-        #content start
-
-        /**/
-
         $content = "<?php \n";
         $content .= "use yii\helpers\Url; \n";
         $content .= "use vova07\imperavi\Widget; \n";
@@ -70,7 +66,7 @@ class News extends ActiveRecord
 
         //$arg = "test ".$uri;
 
-        $file = "../views/news/".$uri.".php";
+        $file = "../views/services/".$uri.".php";
 
         if (!file_exists($file)) {
             $fp = fopen($file, "w");

@@ -1,6 +1,5 @@
 <?php
 
-echo "article1";
 $art = $model->renderArt('15');
 
 

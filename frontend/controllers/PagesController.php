@@ -66,14 +66,6 @@ class PagesController extends Controller
     public function actionResult(){
         $model = new Filter();
         $model->searchresult($_POST);
-        foreach ($)
-        $tables = (new Query())
-            ->select('*')
-            ->join(	'INNER JOIN',
-                'form_fields',
-                'TABLE_NAME_2.COLUMN =TABLE_NAME_1.COLUMN',
-
-            );
 
         return $this->render('sell', ['model' => $model]);
     }

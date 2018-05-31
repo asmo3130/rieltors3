@@ -11,7 +11,7 @@ use yii\base\Model;
 use yii\db\ActiveRecord;
 use yii\helpers\Url;
 
-class News extends ActiveRecord
+class Vacancies extends ActiveRecord
 {
     public static function  tableName(){
         return 'articles';
@@ -70,7 +70,7 @@ class News extends ActiveRecord
 
         //$arg = "test ".$uri;
 
-        $file = "../views/news/".$uri.".php";
+        $file = "../views/vacancies/".$uri.".php";
 
         if (!file_exists($file)) {
             $fp = fopen($file, "w");
@@ -86,6 +86,4 @@ class News extends ActiveRecord
 
         return true;
     }
-
-
 }
