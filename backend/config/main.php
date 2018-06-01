@@ -12,6 +12,10 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['debug'],
     'modules' => [
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => ['*', '127.0.0.1', '::1']
+        ],
         'rbac' => [
             'class' => 'githubjeka\rbac\Module',
             'as access' => [ // if you need to set access
@@ -32,7 +36,10 @@ return [
         ],
         'redactor' => 'yii\redactor\RedactorModule',
         'Pages' => [
-            'class' => 'app\modules\pages\Module',
+            'class' => 'backend\modules\pages\Module',
+        ],
+        'articles' => [
+            'class' => 'backend\modules\articles\Module',
         ],
     ],
     'components' => [

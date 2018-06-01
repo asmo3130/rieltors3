@@ -1,16 +1,16 @@
 <?php
 
-namespace backend\modules\pages;
+namespace backend\modules\articles;
 
 /**
- * Pages module definition class
+ * articles module definition class
  */
-class Module extends \yii\base\Module
+class Modele extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'app\modules\pages\controllers';
+    public $controllerNamespace = 'backend\modules\articles\controllers';
 
     /**
      * {@inheritdoc}
