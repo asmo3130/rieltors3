@@ -31,6 +31,9 @@ return [
             'class' => 'app\modules\actions\module',
         ],
         'redactor' => 'yii\redactor\RedactorModule',
+        'Pages' => [
+            'class' => 'app\modules\pages\Module',
+        ],
     ],
     'components' => [
 
