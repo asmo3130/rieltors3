@@ -38,6 +38,9 @@ return [
         'Pages' => [
             'class' => 'backend\modules\pages\Module',
         ],
+        'action' => [
+            'class' => 'backend\modules\actions\Module',
+        ],
         'articles' => [
             'class' => 'backend\modules\articles\Module',
         ],

@@ -3,14 +3,14 @@
 namespace backend\modules\actions;
 
 /**
- * app module definition class
+ * articles module definition class
  */
-class module extends \yii\base\Module
+class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'app\modules\actions\controllers';
+    public $controllerNamespace = 'backend\modules\articles\controllers';
 
     /**
      * {@inheritdoc}
