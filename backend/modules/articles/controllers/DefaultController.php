@@ -36,7 +36,7 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Articles::find()->where(['page_id' => 9]),
+            'query' => Articles::find("*")->where(['page_id' => 9]),
         ]);
 
         return $this->render('index', [

@@ -42,7 +42,7 @@ $params = [
 
     <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'page_id')->dropDownList($items, $params) ?>
+    <?= $form->field($model, 'page_id')->input('hidden', ['value' => 5]) ?>
 
     <?= $form->field($model, 'img')->textarea(['rows' => 6]) ?>
 

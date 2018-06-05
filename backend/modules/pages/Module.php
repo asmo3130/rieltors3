@@ -3,14 +3,14 @@
 namespace backend\modules\pages;
 
 /**
- * Pages module definition class
+ * pages module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'app\modules\pages\controllers';
+    public $controllerNamespace = 'backend\modules\pages\controllers';
 
     /**
      * {@inheritdoc}

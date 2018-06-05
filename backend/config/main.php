@@ -17,7 +17,7 @@ return [
             'allowedIPs' => ['*', '127.0.0.1', '::1']
         ],
         'rbac' => [
-            'class' => 'githubjeka\rbac\Module',
+            'class' => 'githubjeka\rbac\Modu le',
             'as access' => [ // if you need to set access
                 'class' => 'yii\filters\AccessControl',
                 'rules' => [
@@ -35,15 +35,34 @@ return [
             'class' => 'app\modules\actions\module',
         ],
         'redactor' => 'yii\redactor\RedactorModule',
-        'Pages' => [
-            'class' => 'backend\modules\pages\Module',
+        'articles' => [
+            'class' => 'backend\modules\articles\Module',
         ],
         'action' => [
             'class' => 'backend\modules\actions\Module',
         ],
-        'articles' => [
-            'class' => 'backend\modules\articles\Module',
+        'vacancies' => [
+            'class' => 'backend\modules\vacancies\Module',
         ],
+        'services' => [
+            'class' => 'backend\modules\services\Module',
+        ],
+        'Pages' => [
+            'class' => 'backend\modules\pages\Module',
+        ],
+        'contacts' => [
+            'class' => 'backend\modules\contacts\Module',
+        ],
+        'about' => [
+            'class' => 'backend\modules\about\Module',
+        ],
+        'news' => [
+            'class' => 'backend\modules\news\Module',
+        ],
+        'estate' => [
+            'class' => 'backend\modules\estate\Module',
+        ],
+
     ],
     'components' => [
 

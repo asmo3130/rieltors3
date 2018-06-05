@@ -17,6 +17,18 @@
     <title>Document</title>
 </head>
 <body>
-    tete
+<?
+
+use yii\helpers\Html;
+
+$this->title = 'Blog';
+$this->params['breadcrumbs'][] = $this->title;
+
+print_r ($model->find()->all());
+
+?>
+
+
+
 </body>
 </html>
